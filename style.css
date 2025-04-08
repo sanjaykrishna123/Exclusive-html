@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main .topHeader{
     background-color: #000;
@@ -17,6 +18,7 @@
     color: #fafafa;
     font-size: 14px;
     line-height: 21px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main .topHeader .arrangement p span{
     text-decoration: underline;
@@ -25,6 +27,7 @@
     line-height: 24px;
     margin-left: 5px;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main .topHeader .arrangement .language{
     display: flex;
@@ -42,61 +45,69 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 50px 0 10px;
 }
-#main section.wrapper .header .headerLeft{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#main section.wrapper .header .hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
-#main section.wrapper .header .headerLeft h1 a{
+#main section.wrapper .header .hamburger .bar{
+    background-color: #000;
+    height: 4px;
+    width: 25px;
+    margin: 3px 0;
+}
+#main section.wrapper .header .leftContainer{
+    display: flex;
+}
+#main section.wrapper .header .leftContainer h1 a{
     text-decoration: none;
     font-size: 24px;
     font-weight: 700;
     color: #000;
     line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 195px;
 }
-#main section.wrapper .header .headerLeft .pages{
+#main section.wrapper .header .leftContainer .pages{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
-#main section.wrapper .header .headerLeft .pages p{
+#main section.wrapper .header .leftContainer .pages p{
     color: #000;
     font-size: 16px;
     line-height: 24px;
     margin-right: 25px;
     font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#main section.wrapper .header .headerLeft .pages p:first-child{
+#main section.wrapper .header .leftContainer .pages p:first-child{
     text-decoration: underline;
 }
-#main section.wrapper .header .headerLeft .pages p:last-child{
+#main section.wrapper .header .leftContainer .pages p:last-child{
     margin-right: 0;
 }
-#main section.wrapper .header .headerRight{
-    width: 30%;
+#main section.wrapper .header .rightContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
 }
-#main section.wrapper .header .headerRight .searchBar{
-    
-}
-#main section.wrapper .header .headerRight .searchBar input{
+#main section.wrapper .header .rightContainer .searchBar input{
     background-color: #f5f5f5;
     border: none;
     padding: 7px 30px 7px 30px;
     border-radius: 4px;
-    
 }
-#main section.wrapper .header .headerRight .searchBar img{
+#main section.wrapper .header .rightContainer .searchBar img{
     width: 16px;
     position: relative;
     left: -30px;
     top: 3px
 }
-#main section.wrapper .header .headerRight img{
+#main section.wrapper .header .rightContainer img{
     width: 16px;
 }
 #main section.wrapper .spotlight{
@@ -125,13 +136,15 @@
     line-height: 24px;
     font-weight: 400;
     margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#main section.wrapper .spotlight .spotlightLeft h1{
+#main section.wrapper .spotlight .spotlightLeft h2{
     color: #fafafa;
     font-size: 48px;
     font-weight: 600;
     line-height: 60px;
     margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .spotlight .spotlightLeft .shopNowButton{
     display: flex;
@@ -144,13 +157,20 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .spotlight .spotlightLeft .shopNowButton img{
     margin-left: 5px;
 }
+#main section.wrapper .spotlight .spotlightRight{
+    width: 50%;
+}
 #main section.wrapper .spotlight .spotlightRight img{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 #main section.wrapper .categories .categorySymbolContainer{
     display: flex;
@@ -169,18 +189,21 @@
     font-weight: 600;
     line-height: 20px;
     margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#main section.wrapper .categories h1{
+#main section.wrapper .categories h2{
     color: #000;
     font-size: 36px;
     font-weight: 600;
     line-height: 48px;
     margin: 20px 0;
     letter-spacing: 4%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .categories .categoryList{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -194,6 +217,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 #main section.wrapper .categories .categoryList .categoryContainer p.categoryName{
     margin-top: 20px;
@@ -206,21 +230,23 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-bottom: 70px;
 }
 #main section.wrapper .ratedProducts .productsList .productCard{
     width: 245px;
     height: 322px;
-    margin-right: 28px;
     margin-top: 50px;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    border-radius: 4px;
 }
 #main section.wrapper .ratedProducts .productsList .productCard:hover{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
 }
-#main section.wrapper .ratedProducts .productsList .productCard:nth-child(4n){
-    margin-right: 0;
+#main section.wrapper .ratedProducts .productsList .productCard:hover .cartButton{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .productCardTop{
     width: 100%;
@@ -229,6 +255,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .cartButton{
     width: 100%;
@@ -237,6 +264,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .cartButton:hover{
     opacity: 0.8;
@@ -246,6 +275,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .productCardTop .newContainer{
     position: absolute;
@@ -264,6 +294,7 @@
     line-height: 18px;
     color: #fafafa;
     font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .productCardTop .reactionContainer{
     position: absolute;
@@ -294,6 +325,7 @@
     font-weight: 500;
     line-height: 24px;
     margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .productCardBottom .additionalInfo{
     width: 100%;
@@ -308,6 +340,7 @@
     font-weight: 500;
     line-height: 24px;
     align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .ratedProducts .productsList .productCard .productCardBottom .additionalInfo .ratings{
     margin: 10px 10px 0;
@@ -356,12 +389,14 @@
     align-items: center;
     margin: 20px auto 0;
     cursor: pointer;
+    padding: 16px 48px;
 }
 #main section.wrapper .ratedProducts .allProducts p{
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     color: #fafafa;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .services{
     margin: 100px 0;
@@ -401,11 +436,13 @@
     line-height: 28px;
     font-weight: 600;
     margin: 20px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main section.wrapper .services .serviceList .service p{
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main footer{
     padding: 60px 0 15px;
@@ -420,38 +457,42 @@
     display: flex;
     flex-direction: column;
 }
-#main footer section.wrapper .column a{
+#main footer section.wrapper .column a.logo{
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
     color: #fff;
     text-decoration: none;
     margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#main footer section.wrapper .column p.subscribe{
+#main footer section.wrapper .column a.subscribe{
     color: #fff;
     font-size: 20px;
     line-height: 28px;
     font-weight: 500;
-    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
-#main footer section.wrapper .column p{
+#main footer section.wrapper .column a.regular{
     margin-bottom: 20px;
     color: #fff;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
-#main footer section.wrapper .column p.info{
+#main footer section.wrapper .column a.info{
     margin-bottom: 10px;
     color: #fafafa;
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
     opacity: 0.8;
-}
-#main footer section.wrapper .column .searchBar{
-    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 #main footer section.wrapper .column .searchBar input{
     width: 180px;
@@ -466,8 +507,12 @@
     width: 24px;
     height: 24px;
     position: relative;
-    left: -40px;
-    top: 8px;
+    left: -16%;
+    top: 15%;
+    cursor: pointer;
+}
+#main footer section.wrapper .column .imageContainer img{
+    cursor: pointer;
 }
 #main footer section.wrapper .column .imageContainer img.qr{
     float: left;
@@ -475,6 +520,10 @@
     height: 80px;
     margin-right: 10px;
     cursor: pointer;
+}
+#main footer section.wrapper .column .imageContainer .extraContainer{
+    display: flex;
+    flex-direction: column;
 }
 #main footer section.wrapper .column .socialMedias{
     display: flex;
@@ -489,11 +538,17 @@
 #main footer section.wrapper .column .socialMedias .socialMedia:last-child{
     margin-right: 0;
 }
+#main footer hr{
+    border-width: 1px;
+    opacity: 40%;
+    margin-top: 50px;
+    color: #fff;
+}
 #main footer .copyWrite{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 10px;
 }
 #main footer .copyWrite img{
     opacity: 0.3;
@@ -505,4 +560,198 @@
     line-height: 24px;
     font-weight: 400;
     opacity: 0.3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1420px){
+    #main section.wrapper .categories .categoryList .categoryContainer{
+        width: 165px;
+    }
+    #main section.wrapper .ratedProducts .productsList .productCard{
+        width: 250px;
+    }
+}
+
+@media (max-width: 1320px){
+    #main section.wrapper .spotlight .spotlightLeft h2{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1270px){
+    #main section.wrapper .header .leftContainer h1 a{
+        margin-right: 125px;
+    }
+}
+
+@media (max-width: 1196px) {
+    #main .topHeader .arrangement{
+        margin-left: 25%;
+    }
+    #main section.wrapper .header .leftContainer h1 a{
+        margin-right: 75px;
+    }
+    #main footer section.wrapper .column a.logo{
+        font-size: 20px;
+    }
+    #main footer section.wrapper .column a.subscribe{
+        font-size: 18px;
+    }
+    #main footer section.wrapper .column a.regular{
+        font-size: 14px;
+    }
+    #main footer section.wrapper .column a.info{
+        font-size: 10px;
+    }
+    #main footer section.wrapper .column .imageContainer img.qr{
+        width: 50px;
+        height: 50px;
+    }
+    #main footer section.wrapper .column .imageContainer .extraContainer img{
+        width: 55px;
+        height: 27px;
+    }
+}
+
+@media (max-width: 1100px){
+    #main section.wrapper .header .leftContainer h1 a{
+        margin-right: 45px;
+    }
+}
+
+@media (max-width: 1080px){
+    #main section.wrapper .header .leftContainer{
+        display: none;
+    }
+
+    #main section.wrapper .header .hamburger{
+        display: flex;
+    }
+
+    #main footer section.wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main footer section.wrapper .column{
+        text-align: center;
+    }
+
+    #main footer section.wrapper .column a:first-child{
+        margin-top: 20px;
+    }
+
+    #main footer section.wrapper .column .imageContainer{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #main footer section.wrapper .column .searchBar img{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    #main .topHeader .arrangement{
+        margin-left: 15%;
+    }
+
+    #main section.wrapper .ratedProducts .allProducts{
+        width: 150px;
+        height: 40px;
+    }
+
+    section.wrapper .services .serviceList .service h4{
+        font-size: 18px !important;
+    }
+
+    section.wrapper .services .serviceList .service p{
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 840px){
+    #main .topHeader{
+        display: none;
+    }
+
+    #main section.wrapper .header{
+        margin-top: 30px;
+    }
+
+    #main section.wrapper .spotlight .spotlightLeft h2{
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+    #main section.wrapper .services .serviceList{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main section.wrapper .services .serviceList .service{
+        margin-top: 50px;
+    }
+
+    #main section.wrapper .services .serviceList .service:first-child{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 715px){
+    #main section.wrapper .ratedProducts .productsList{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px){
+    #main section.wrapper .spotlight{
+        flex-direction: column;
+    }
+
+    #main section.wrapper .spotlight .spotlightLeft{
+        width: 100%;
+    }
+
+    #main section.wrapper .spotlight .spotlightRight{
+        width: 100%;
+    }
+}
+
+@media (max-width: 476px){
+    #main section.wrapper .categories .categoryList{
+        justify-content: center;
+    }
+
+    #main section.wrapper .header{
+        flex-direction: column;
+    }
+
+    #main section.wrapper .header .hamburger{
+        align-self: flex-start;
+    }
+
+    #main section.wrapper .header .rightContainer{
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 415px){
+    #main section.wrapper{
+        padding: 0;
+    }
+
+    #main section.wrapper .header .rightContainer .searchBar img{
+        display: none;
+    }
+
+    #main section.wrapper .header .rightContainer .searchBar input{
+        padding-right: 10px;
+        margin-right: 20px;
+    }
+
+    #main footer .copyWrite p{
+        font-size: 12px;
+    }
 }
