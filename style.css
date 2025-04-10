@@ -76,7 +76,8 @@
     flex-direction: row;
     align-items: center;
 }
-#main section.wrapper .header .leftContainer .pages p{
+#main section.wrapper .header .leftContainer .pages a{
+    text-decoration-line: none;
     color: #000;
     font-size: 16px;
     line-height: 24px;
@@ -84,10 +85,10 @@
     font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
 }
-#main section.wrapper .header .leftContainer .pages p:first-child{
+#main section.wrapper .header .leftContainer .pages a:first-child{
     text-decoration: underline;
 }
-#main section.wrapper .header .leftContainer .pages p:last-child{
+#main section.wrapper .header .leftContainer .pages a:last-child{
     margin-right: 0;
 }
 #main section.wrapper .header .rightContainer{
@@ -381,7 +382,6 @@
 }
 #main section.wrapper .ratedProducts .allProducts{
     width: 234px;
-    height: 56px;
     border-radius: 4px;
     background-color: #DB4444;
     display: flex;
@@ -658,7 +658,6 @@
 
     #main section.wrapper .ratedProducts .allProducts{
         width: 150px;
-        height: 40px;
     }
 
     section.wrapper .services .serviceList .service h4{
@@ -749,6 +748,10 @@
     #main section.wrapper .header .rightContainer .searchBar input{
         padding-right: 10px;
         margin-right: 20px;
+    }
+
+    #main section.wrapper .spotlight .spotlightLeft{
+        width: auto;
     }
 
     #main footer .copyWrite p{
